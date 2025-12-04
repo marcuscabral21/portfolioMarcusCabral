@@ -1,0 +1,30 @@
+/* app/globals.css - Com variáveis mas com gradiente */
+@import "tailwindcss";
+
+:root {
+  --gradient-start: #f0fdfa;
+  --gradient-middle: #d1fae5;
+  --gradient-end: #a7f3d0;
+  --text-color: #0f766e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gradient-start: #134e4a;
+    --gradient-middle: #0f766e;
+    --gradient-end: #0d9488;
+    --text-color: #f0fdfa;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, 
+    var(--gradient-start) 0%, 
+    var(--gradient-middle) 50%, 
+    var(--gradient-end) 100%
+  );
+  color: var(--text-color);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
